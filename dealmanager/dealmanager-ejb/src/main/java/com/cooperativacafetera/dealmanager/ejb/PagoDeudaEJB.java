@@ -47,21 +47,20 @@ public class PagoDeudaEJB extends EJBGenerico<PagoDeuda> {
 		return 2;
 	}
 
-	/**
-	 * lista los pagos de un deudor
-	 * 
-	 * @param cliente
-	 *            el cliente del pago
-	 * @param deuda
-	 *            la deuda del pago
-	 * @return una lista de pagos de un cliente en una deuda
-	 */
-	public List<PagoDeuda> listarPagos(Cliente cliente, Deuda deuda) {
-		return dao.ejecutarNamedQuery(PagoDeuda.LISTAR_PAGOS_CLIENTES, cliente, deuda);
-	}
 
 	@Override
 	public Class getClase() {
 		return PagoDeuda.class;
+	}
+	
+	/**
+	 * lista los pagos de un deudor
+	 * 
+	 * @param cliente el cliente del pago
+	 * @param deuda la deuda del pago
+	 * @return una lista de pagos de un cliente en una deuda
+	 */
+	public List<PagoDeuda> listarPagos(Cliente cliente, Deuda deuda) {
+		return dao.ejecutarNamedQuery(PagoDeuda.LISTAR_PAGOS_CLIENTES, cliente, deuda);
 	}
 }

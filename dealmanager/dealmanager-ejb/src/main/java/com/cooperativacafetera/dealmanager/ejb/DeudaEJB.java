@@ -19,7 +19,7 @@ public class DeudaEJB extends EJBGenerico<Deuda> {
 		
 
 	/**
-	 * crea una deuda
+	 * Metodo utilizado para crear una deuda
 	 */
 	public void crear(Deuda deuda) {
 		dao.crear(deuda);

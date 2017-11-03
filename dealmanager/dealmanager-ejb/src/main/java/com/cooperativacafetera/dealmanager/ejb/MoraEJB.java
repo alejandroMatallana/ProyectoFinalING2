@@ -15,6 +15,8 @@ import com.cooperativacafetera.dealmanager.modelo.Deuda;
 @Stateless
 @Remote
 public class MoraEJB extends EJBGenerico<Deuda> {
+	
+	//Implementacion y declaracion de los EJBS
 
 	@EJB
 	private DeudorEJB deudorEJB;
@@ -29,7 +31,7 @@ public class MoraEJB extends EJBGenerico<Deuda> {
 	}
 
 	/**
-	 * registra los usuario en mora
+	 * Registra todos los usuarios que estan en mora
 	 * 
 	 * @param morasDTO
 	 *            la lista de usuarios en mora

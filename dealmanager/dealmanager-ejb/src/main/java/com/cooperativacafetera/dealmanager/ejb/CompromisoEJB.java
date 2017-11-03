@@ -113,6 +113,15 @@ public class CompromisoEJB extends EJBGenerico<Compromiso> {
 	public List<Compromiso> listarCompromisosCedula(String cedula) {
 		return dao.ejecutarNamedQuery(Compromiso.LISTA_COMPROMISOS_DEUDOR, cedula);
 	}
+	
+	/**
+	 * Lista los compromisos de hoy
+	 * 
+	 * @return una lista de compromisos de hoy
+	 */
+	public List<Compromiso> listarCompromisosHoy() {
+		return dao.ejecutarNamedQuery(Compromiso.LISTA_COMPROMISOS_FECHA, Calendar.getInstance().getTime());
+	}
 
 	/**
 	 * lista los comrpomisos de los deudores
@@ -135,6 +144,15 @@ public class CompromisoEJB extends EJBGenerico<Compromiso> {
 		}
 		return lista;
 	}
+	
+	/**
+	 * Lista los compromisos de hoy
+	 * 
+	 * @return una lista de compromisos de hoy
+	 */
+	public List<Compromiso> listarCompromisosFecha(Date fecha) {
+		return dao.ejecutarNamedQuery(Compromiso.LISTA_COMPROMISOS_FECHA, fecha);
+	}
 
 	/**
 	 * lista los compromisos por dias en mora
@@ -155,24 +173,6 @@ public class CompromisoEJB extends EJBGenerico<Compromiso> {
 			}
 		}
 		return lista;
-	}
-
-	/**
-	 * Lista los compromisos de hoy
-	 * 
-	 * @return una lista de compromisos de hoy
-	 */
-	public List<Compromiso> listarCompromisosHoy() {
-		return dao.ejecutarNamedQuery(Compromiso.LISTA_COMPROMISOS_FECHA, Calendar.getInstance().getTime());
-	}
-
-	/**
-	 * Lista los compromisos de hoy
-	 * 
-	 * @return una lista de compromisos de hoy
-	 */
-	public List<Compromiso> listarCompromisosFecha(Date fecha) {
-		return dao.ejecutarNamedQuery(Compromiso.LISTA_COMPROMISOS_FECHA, fecha);
 	}
 
 	/**

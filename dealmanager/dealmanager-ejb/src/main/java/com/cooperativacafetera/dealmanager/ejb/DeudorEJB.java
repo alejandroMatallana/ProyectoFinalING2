@@ -18,17 +18,16 @@ public class DeudorEJB extends EJBGenerico<Cliente>{
 	}
 
 	/**
-	 * crea un deudor
+	 * Metodo que crear un cliente de tipo deudor
 	 */
 	public void crear(Cliente cliente) {
 		dao.crear(cliente);
 	}
 
 	/**
-	 * busca un cliente
+	 * Metodo que se utiliza para buscar un cliente
 	 * 
-	 * @param cedula
-	 *            la cedula del cliente a buscar
+	 * @param cedula, la cedula del cliente a buscar
 	 * @return el cliente si lo encuentra
 	 */
 	public Cliente buscar(Object cedula) {
