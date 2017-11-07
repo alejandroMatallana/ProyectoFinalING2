@@ -11,41 +11,11 @@ app.controller("controladorCompromiso", function($scope, $http, $sessionStorage,
 	$scope.valor=0;
 	$scope.descripcion="";
 
-	/**
-	 * lista los compromisos de un deudor
-	 */
-	$scope.listarCompromisosDeudor = function() {
-		
-		var dato1 = $.param({
-			cedula : $scope.cedula
-		});
-		$http({
-			url : 'rest/servicios/listarCompromisosDeudor',
-			method : "POST",
-			data : dato1,
-			headers : {
-				"Content-Type" : "application/x-www-form-urlencoded"
-			}
-		}).success(function(data, status, headers, config) {
-			if (data.codigo == '00') {
-				$scope.compromisos = data.obj;
-				
-			} else {
-				alert(data.mensaje);
-				$scope.compromisos= [];
-			}
-
-		}).error(function(data, status, headers, config) {
-
-			alert('error::' + data.mensaje);
-		});
-
-	}
-	
 	
 	
 	/**
-	 * agrega un compromiso al deudor
+	 * Funcion que agrega un compromiso 
+	 * con algunas validaciones a la hora de agregar el compromiso
 	 */
 	$scope.agregarCompromiso = function() {
 		
@@ -79,6 +49,38 @@ app.controller("controladorCompromiso", function($scope, $http, $sessionStorage,
 
 		}
 			
+	}
+	
+	
+	/**
+	 * Funcion que lista los compromisos de un deudor 
+	 */
+	$scope.listarCompromisosDeudor = function() {
+		
+		var dato1 = $.param({
+			cedula : $scope.cedula
+		});
+		$http({
+			url : 'rest/servicios/listarCompromisosDeudor',
+			method : "POST",
+			data : dato1,
+			headers : {
+				"Content-Type" : "application/x-www-form-urlencoded"
+			}
+		}).success(function(data, status, headers, config) {
+			if (data.codigo == '00') {
+				$scope.compromisos = data.obj;
+				
+			} else {
+				alert(data.mensaje);
+				$scope.compromisos= [];
+			}
+
+		}).error(function(data, status, headers, config) {
+
+			alert('error::' + data.mensaje);
+		});
+
 	}
 	
 		
