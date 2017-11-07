@@ -27,6 +27,10 @@ import javax.persistence.TemporalType;
 		@NamedQuery(name = Compromiso.LISTA_COMPROMISOS_FECHA, query = "select c from Compromiso c where c.fechaPagoMax=?1"),
 		@NamedQuery(name = Compromiso.LISTA_COMPROMISOS_DEUDA, query = "select c from Compromiso c where c.deuda.cliente=?1") })
 public class Compromiso implements Serializable {
+	
+	/**
+	 * Variables estaticas 
+	 */
 
 	public static final String LISTA_COMPROMISOS = "Compromsio.compromisos";
 	public static final String LISTA_COMPROMISOS_TIPO = "Compromsio.listarTipo";

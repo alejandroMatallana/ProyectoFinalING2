@@ -22,6 +22,9 @@ public class Deuda implements Serializable {
 
 	public static final String BUSCAR_DEUDA_CLIENTE = "Deuda.buscar";
 	
+	/**
+	 * Atributos de la clase deuda
+	 */
 	@Id
 	@Column(name = "codigo")
 	private String codigo;
@@ -39,6 +42,10 @@ public class Deuda implements Serializable {
 
 	@Column
 	private double valor;
+	
+	/**
+	 * Constructores
+	 */
 
 	public Deuda() {
 	}

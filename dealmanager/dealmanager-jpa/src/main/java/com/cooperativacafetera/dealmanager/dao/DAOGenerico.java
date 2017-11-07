@@ -49,6 +49,11 @@ public class DAOGenerico {
 		return (T) em.find(clase, pk);
 	}
 
+	public void refrescar(Object entity) {
+
+		em.refresh(entity);
+	}
+	
 	/**
 	 * Metodo para listar los objetos guardados en la base de datos
 	 * @param nombre
@@ -65,10 +70,7 @@ public class DAOGenerico {
 		return q.getResultList();
 	}
 
-	public void refrescar(Object entity) {
 
-		em.refresh(entity);
-	}
 	
 	
 	

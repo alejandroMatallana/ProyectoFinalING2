@@ -23,8 +23,16 @@ import javax.persistence.TemporalType;
 @NamedQueries({
 		@NamedQuery(name = PagoDeuda.LISTAR_PAGOS_CLIENTES, query = "select pd from PagoDeuda pd where pd.cliente=?1 and pd.deuda=?2") })
 public class PagoDeuda implements Serializable {
+	
+	/**
+	 * Variable estatica
+	 */
 
 	public static final String LISTAR_PAGOS_CLIENTES = "PagoDeuda.listar";
+	
+	/**
+	 * Atributos de la clase 
+	 */
 	
 	@Id
 	@Column(name = "codigo")

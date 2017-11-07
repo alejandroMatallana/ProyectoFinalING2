@@ -10,6 +10,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Cliente")
 public class Cliente implements Serializable {
+	
+	//Atributos
 
 	@Id
 	@Column(name = "cedula")
@@ -24,9 +26,17 @@ public class Cliente implements Serializable {
 	@Column(name = "correo")
 	private String correo;
 
+	//Constructor vacio
 	public Cliente() {
 	}
 
+	/**
+	 * Constructor con parametros
+	 * @param cedula
+	 * @param nombre
+	 * @param telefono
+	 * @param correo
+	 */
 	public Cliente(String cedula, String nombre, String telefono, String correo) {
 		super();
 		this.cedula = cedula;
