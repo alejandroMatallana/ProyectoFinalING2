@@ -30,8 +30,7 @@ public class Compromiso implements Serializable {
 	
 	/**
 	 * Variables estaticas 
-	 */
-
+	*/
 	public static final String LISTA_COMPROMISOS = "Compromsio.compromisos";
 	public static final String LISTA_COMPROMISOS_TIPO = "Compromsio.listarTipo";
 	public static final String LISTA_COMPROMISOS_FECHA = "Compromsio.listarHoy";
@@ -65,8 +64,7 @@ public class Compromiso implements Serializable {
 	@Column
 	private double valor;
 
-	public Compromiso() {
-	}
+	public Compromiso() {}
 
 	public Compromiso(String descripcion, Date fechaPagoMax, Deuda deuda, int tipo, boolean estado, double valor) {
 		super();
@@ -133,5 +131,4 @@ public class Compromiso implements Serializable {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-
 }

@@ -12,7 +12,6 @@ import javax.persistence.Table;
 public class Cliente implements Serializable {
 	
 	//Atributos
-
 	@Id
 	@Column(name = "cedula")
 	private String cedula;
@@ -27,8 +26,7 @@ public class Cliente implements Serializable {
 	private String correo;
 
 	//Constructor vacio
-	public Cliente() {
-	}
+	public Cliente() {}
 
 	/**
 	 * Constructor con parametros
@@ -76,5 +74,4 @@ public class Cliente implements Serializable {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-
 }

@@ -17,7 +17,6 @@ import com.cooperativacafetera.dealmanager.modelo.Deuda;
 public class MoraEJB extends EJBGenerico<Deuda> {
 	
 	//Implementacion y declaracion de los EJBS
-
 	@EJB
 	private DeudorEJB deudorEJB;
 	@EJB

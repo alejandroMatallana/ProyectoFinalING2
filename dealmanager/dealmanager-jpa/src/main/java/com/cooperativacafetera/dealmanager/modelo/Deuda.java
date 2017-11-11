@@ -47,8 +47,7 @@ public class Deuda implements Serializable {
 	 * Constructores
 	 */
 
-	public Deuda() {
-	}
+	public Deuda() {}
 
 	public Deuda(String codigo, Cliente cliente ,  Date fecha, boolean estado, double valor) {
 		super();
@@ -57,7 +56,6 @@ public class Deuda implements Serializable {
 		this.fecha = fecha;
 		this.estado = estado;
 		this.valor = valor;
-		
 	}
 
 	public String getCodigo() {
@@ -99,5 +97,4 @@ public class Deuda implements Serializable {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-
 }

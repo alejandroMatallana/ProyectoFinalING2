@@ -12,8 +12,7 @@ public class MoraDTO {
 	private Date fecha;
 	private double quotaTotal;
 
-	public MoraDTO() {
-	}
+	public MoraDTO() {}
 
 	public MoraDTO(String idQuota, String idClient, String name, String email, String phoneNumber, Date fecha,
 			double quotaTotal) {

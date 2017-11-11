@@ -12,8 +12,7 @@ public class CompromisoDTO {
 	private String deuda;
 	private double valor;
 
-	public CompromisoDTO() {
-	}
+	public CompromisoDTO() {}
 
 	public CompromisoDTO(String cedula, String descripcion, Date fechaPagoMax, String deuda, double valor) {
 		super();

@@ -13,7 +13,6 @@ public class DeudaEJB extends EJBGenerico<Deuda> {
 
 	@Override
 	public Class getClase() {
-		// TODO Auto-generated method stub
 		return Deuda.class;
 	}
 		
@@ -25,9 +24,6 @@ public class DeudaEJB extends EJBGenerico<Deuda> {
 		dao.crear(deuda);
 	}
 	
-	
-
-
 	/**
 	 * busca una deuda
 	 * @param codigo
@@ -37,7 +33,4 @@ public class DeudaEJB extends EJBGenerico<Deuda> {
 	public Deuda buscar(Object codigo) {
 		return dao.buscar(codigo);
 	}
-	
-	
-	
 }

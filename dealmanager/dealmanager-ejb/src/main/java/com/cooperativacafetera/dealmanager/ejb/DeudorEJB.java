@@ -13,7 +13,6 @@ public class DeudorEJB extends EJBGenerico<Cliente>{
 
 	@Override
 	public Class getClase() {
-		// TODO Auto-generated method stub
 		return Cliente.class;
 	}
 

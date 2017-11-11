@@ -45,12 +45,10 @@ public class DAOGenerico {
 	 * @return, el objeto si se encuentra
 	 */
 	public <T> T buscar(Object pk) {
-
 		return (T) em.find(clase, pk);
 	}
 
 	public void refrescar(Object entity) {
-
 		em.refresh(entity);
 	}
 	
@@ -66,13 +64,6 @@ public class DAOGenerico {
 			Object param = parametros[i];
 			q.setParameter(i + 1, param);
 		}
-
 		return q.getResultList();
 	}
-
-
-	
-	
-	
-
 }

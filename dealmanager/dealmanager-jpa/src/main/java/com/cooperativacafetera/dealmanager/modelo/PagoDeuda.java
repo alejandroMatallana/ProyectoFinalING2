@@ -27,13 +27,11 @@ public class PagoDeuda implements Serializable {
 	/**
 	 * Variable estatica
 	 */
-
 	public static final String LISTAR_PAGOS_CLIENTES = "PagoDeuda.listar";
 	
 	/**
 	 * Atributos de la clase 
 	 */
-	
 	@Id
 	@Column(name = "codigo")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -57,8 +55,7 @@ public class PagoDeuda implements Serializable {
 	@JoinColumn(name = "deuda")
 	private Deuda deuda;
 
-	public PagoDeuda() {
-	}
+	public PagoDeuda() {}
 
 	public PagoDeuda(int codigo, Date fecha, double valor, double interes, Deuda deuda, Cliente cliente) {
 		super();
@@ -117,5 +114,4 @@ public class PagoDeuda implements Serializable {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-
 }
